@@ -1,69 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nguyen Tien Dat - Backend Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body{font-family:Arial;margin:0;background:#0f172a;color:white}
-section{padding:60px 15%}
-h1,h2{color:#38bdf8}
-.card{background:#1e293b;padding:20px;border-radius:12px;margin-top:20px}
-a{color:#38bdf8;text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:#0f172a;color:white}
+
+/* NAVBAR */
+nav{
+position:fixed;top:0;width:100%;
+background:#020617;padding:15px 10%;
+display:flex;justify-content:space-between;
+z-index:1000
+}
+nav a{color:#38bdf8;text-decoration:none;margin-left:25px}
+
+/* HERO */
+.hero{
+height:100vh;display:flex;align-items:center;
+justify-content:space-between;padding:0 10%;
+background:linear-gradient(120deg,#0f172a,#020617);
+}
+.hero-text h1{font-size:55px}
+.hero-text h3{color:#38bdf8;margin:10px 0}
+.hero img{
+width:260px;border-radius:50%;
+border:5px solid #38bdf8;
+box-shadow:0 0 40px #38bdf8;
+}
+
+/* SECTION */
+section{padding:80px 10%}
+h2{color:#38bdf8;margin-bottom:25px}
+
+.card{
+background:#1e293b;padding:25px;border-radius:16px;
+margin-top:20px;transition:.3s
+}
+.card:hover{transform:translateY(-6px)}
+
+/* SKILLS GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+/* BUTTON */
+.btn{
+display:inline-block;margin-top:20px;
+background:#38bdf8;color:black;padding:12px 22px;
+border-radius:8px;text-decoration:none;font-weight:600
+}
+
+/* FOOTER */
+footer{text-align:center;padding:30px;color:#94a3b8}
+
 </style>
 </head>
 
 <body>
 
-<section>
+<nav>
+<div><b>Dat Portfolio</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#project">Project</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
 <h1>Nguyen Tien Dat</h1>
 <h3>Backend Developer Intern</h3>
-<p>Backend-focused IT student passionate about building scalable web applications using .NET and databases.</p>
+<p>I build backend systems using .NET and databases.</p>
+<a class="btn" href="https://github.com/DatBongDem">My Github</a>
+</div>
+
+<img src="https://i.imgur.com/2DhmtJ4.png">
 </section>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
 <div class="card">
-I am a third-year IT student at FPT University seeking a Backend Internship to gain real-world experience and contribute to professional projects.
+I am a third-year IT student at FPT University passionate about backend development,
+API design and database systems. I am looking for a Backend Internship to gain real-world experience.
 </div>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
 <h2>Skills</h2>
-<div class="card">
-<b>Languages:</b> C# <br>
-<b>Framework:</b> .NET <br>
-<b>Database:</b> SQL Server, MongoDB <br>
-<b>Tools:</b> Git, Postman, Office, Canva
+<div class="grid">
+<div class="card"><b>Language</b><br>C#</div>
+<div class="card"><b>Framework</b><br>.NET</div>
+<div class="card"><b>Database</b><br>SQL Server, MongoDB</div>
+<div class="card"><b>Tools</b><br>Git, Postman, Office, Canva</div>
 </div>
 </section>
 
-<section>
+<!-- PROJECT -->
+<section id="project">
 <h2>Project</h2>
 <div class="card">
 <h3>FranchiseStore</h3>
 Restaurant Franchise Management System<br><br>
 Role: Backend Team Leader<br>
 Tech: C#, .NET, SQL Server<br><br>
-<a href="https://github.com/DatBongDem/FranchiseStore">View Github</a>
+<a class="btn" href="https://github.com/DatBongDem/FranchiseStore">View Project</a>
 </div>
 </section>
 
-<section>
-<h2>Education & Experience</h2>
-<div class="card">
-FPT University – IT (2022–2026) GPA: 7.3<br><br>
-Backend Intern – FPT Software (09/2025–12/2025)
-</div>
-</section>
-
-<section>
+<!-- CONTACT -->
+<section id="contact">
 <h2>Contact</h2>
 <div class="card">
-Email: se181844nguyentiendat@gmail.com<br>
-Phone: 0369640433<br>
-Location: Gia Lai, Vietnam
+📍 Gia Lai, Vietnam <br>
+📧 se181844nguyentiendat@gmail.com <br>
+📱 0369640433
 </div>
 </section>
+
+<footer>
+© 2026 Nguyen Tien Dat
+</footer>
 
 </body>
 </html>
